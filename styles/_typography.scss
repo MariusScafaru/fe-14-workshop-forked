@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+html {
+    /*
+     - 15 -> body size according to the style-guide
+     - 16 -> default text size in all browsers
+    */
+    font-size: percentage(15 / 16);
+}
+
+body {
+    font-family: 'Alata', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: $mediumDarkGray;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+p, li, a, button {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-decoration: none;
+}

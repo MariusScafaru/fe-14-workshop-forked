@@ -1,0 +1,12 @@
+$images: 'deep-earth', 'night-arcade', 'soccer-team', 'grid', 'from-above', 'pocket-borealis', 'curiosity', 'fisheye';
+
+@mixin images($screenType) {
+    @for $i from 1 through 8 {
+        $image: nth($images, $i);
+        &:nth-child(#{$i}){
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: linear-gradient(0, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%), url("../images/#{$screenType}/image-#{$image}.jpg");
+        }
+    }
+}

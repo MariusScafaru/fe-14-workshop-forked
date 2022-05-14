@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  padding: 0 15px;
+  width: 980px;
+}
+
+html {
+  /*
+     - 15 -> body size according to the style-guide
+     - 16 -> default text size in all browsers
+    */
+  font-size: 93.75%;
+}
+
+body {
+  font-family: 'Alata', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #737373;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p, li, a, button {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(0%, rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../images/desktop/image-hero.jpg");
+  background-image: linear-gradient(0, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url("../images/desktop/image-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 650px;
+}
+
+.hero .container {
+  position: relative;
+}
+
+.hero .hamburger {
+  display: none;
+}
+
+.hero .close {
+  display: none;
+}
+
+.hero header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 30px;
+}
+
+.hero nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 350px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.hero nav li {
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.hero nav li a {
+  color: white;
+}
+
+.hero nav li:hover:after {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 15px);
+}
+
+.hero .inner-container {
+  border: 1px solid white;
+  padding: 15px;
+  width: 500px;
+  position: absolute;
+  top: 200px;
+  color: white;
+}
+
+.interactive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 120px;
+}
+
+.interactive .container {
+  position: relative;
+}
+
+.interactive .container .text {
+  position: absolute;
+  z-index: 15;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  padding: 60px 0 0 60px;
+  background-color: white;
+}
+
+.our-creations {
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.our-creations .container .title-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.our-creations .container .title-container button {
+  background-color: white;
+  border: 1px solid black;
+  padding: 0 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+  height: 35px;
+  letter-spacing: 2px;
+}
+
+.our-creations .container .title-container button:hover {
+  background-color: black;
+  color: white;
+}
+
+.our-creations .container .creations {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.our-creations .container .creations article {
+  color: white;
+  height: 400px;
+  padding: 15px;
+  padding-bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+.our-creations .container .creations article:nth-child(1) {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(0%, rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0))), url("../images/desktop/image-deep-earth.jpg");
+  background-image: linear-gradient(0, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%), url("../images/desktop/image-deep-earth.jpg");
+}
+
+.our-creations .container .creations article:nth-child(2) {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(0%, rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0))), url("../images/desktop/image-night-arcade.jpg");
+  background-image: linear-gradient(0, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%), url("../images/desktop/image-night-arcade.jpg");
+}
+
+.our-creations .container .creations article:nth-child(3) {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(0%, rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0))), url("../images/desktop/image-soccer-team.jpg");
+  background-image: linear-gradient(0, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%), url("../images/desktop/image-soccer-team.jpg");
+}
+
+.our-creations .container .creations article:nth-child(4) {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(0%, rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0))), url("../images/desktop/image-grid.jpg");
+  background-image: linear-gradient(0, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%), url("../images/desktop/image-grid.jpg");
+}
+
+.our-creations .container .creations article:nth-child(5) {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(0%, rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0))), url("../images/desktop/image-from-above.jpg");
+  background-image: linear-gradient(0, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%), url("../images/desktop/image-from-above.jpg");
+}
+
+.our-creations .container .creations article:nth-child(6) {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(0%, rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0))), url("../images/desktop/image-pocket-borealis.jpg");
+  background-image: linear-gradient(0, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%), url("../images/desktop/image-pocket-borealis.jpg");
+}
+
+.our-creations .container .creations article:nth-child(7) {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(0%, rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0))), url("../images/desktop/image-curiosity.jpg");
+  background-image: linear-gradient(0, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%), url("../images/desktop/image-curiosity.jpg");
+}
+
+.our-creations .container .creations article:nth-child(8) {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(0%, rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0))), url("../images/desktop/image-fisheye.jpg");
+  background-image: linear-gradient(0, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%), url("../images/desktop/image-fisheye.jpg");
+}
+
+.our-creations .container .creations article:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: black;
+  margin-top: 120px;
+  color: white;
+}
+
+footer .container .inner-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 45px 0;
+}
+
+footer .container .inner-container ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+footer .container .inner-container .header ul {
+  gap: 30px;
+}
+
+footer .container .inner-container .header ul li {
+  position: relative;
+  padding-bottom: 8px;
+}
+
+footer .container .inner-container .header ul li:hover:after {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 15px);
+}
+
+footer .container .inner-container .header nav {
+  padding-top: 30px;
+}
+
+footer .container .inner-container .header nav a {
+  color: white;
+}
+
+footer .container .inner-container .social ul {
+  gap: 10px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+footer .container .inner-container .social ul li {
+  padding-bottom: 8px;
+}
+
+footer .container .inner-container .social ul li:hover {
+  border-bottom: 1px solid white;
+}
+
+footer .container .inner-container .social .copyright {
+  padding-top: 30px;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,20 @@
+@import "spacing";
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 15px;
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container{
+    padding: 0 $spacing-base;
+    width: 980px;
+}

@@ -1,0 +1,137 @@
+@import "base";
+@import "spacing";
+@import "colors";
+@import "typography";
+@import "sizes";
+@import "mixins";
+
+@media screen and (max-width: 480px){
+    .hero{
+        &.container{
+            width: 100%;
+            padding: 0 $spacing-lg;
+        }
+
+        .hamburger{
+           display: block;; 
+        }
+        nav{
+            display: none;
+        }
+
+        .inner-container{
+            position: relative;
+            width: 100%;
+        }
+
+        h1{
+            font-size: 2rem;
+        }
+    }
+
+
+    .interactive{
+        .container{
+            .text{
+
+                position: static;
+                width: 100%;
+                padding: $spacing-xl 0 0 0;
+                text-align: center;
+
+                h2{
+                    font-size: 2rem;
+                    color: $black;
+                }
+
+                p{
+                    font-size: 1.5rem;
+                    color:$darkGray;
+                }
+               
+            }
+        }
+       
+    }
+
+    .our-creations{
+        position: relative;
+
+        .container{
+            .title-container{
+                justify-content: center;
+                h2{
+                    color: $black;
+                    font-size: 3rem;
+                }
+               
+                button{
+                    position: absolute;
+                    left: calc(50% - (256px /2));
+                    bottom: 0;
+                    padding: 0;
+                    font-size: 2rem;
+                    height: 70px;
+                    width: 256px;
+                }
+            }
+
+            .creations{
+                // grid-template-columns: repeat(1, 1fr);
+                // grid-template-rows: repeat(8, 1fr);
+                display: block;
+
+                article {
+                    margin-bottom: 30px;
+
+                    &:last-child{
+                        margin-bottom: 120px;
+                    }
+                    height: 200px;
+                }
+            }
+        }
+    }
+
+    footer{
+
+
+        .container {
+
+            .inner-container {
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+
+                .header {
+
+                    ul{
+                        flex-direction: column; 
+                        align-items: center;
+                        a{
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+
+
+                .social{
+                    margin-top: $spacing-lg;
+                    ul{
+                        justify-content: center;
+                        align-items: center;
+                        gap: 20px;
+
+                        img{
+                            width: 50px;
+                        }
+                    }
+
+                    .copyright {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

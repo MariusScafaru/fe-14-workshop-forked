@@ -1,0 +1,258 @@
+@import "base";
+@import "spacing";
+@import "colors";
+@import "typography";
+@import "sizes";
+@import "mixins";
+
+
+.hero{
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(0, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100%), url("../images/desktop/image-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+
+    .container {
+        position: relative;
+    }
+
+    .hamburger{
+        display: none; 
+     }
+
+    .close{
+        display: none;
+    }
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: $spacing-md;
+    }
+
+    nav {
+        ul{
+            list-style: none;
+            display: flex;
+            width: 350px;
+            justify-content: space-between;
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            position: relative;
+            padding-bottom: 8px;
+
+            a{
+                color: $white;
+            }
+
+            &:hover:after{
+                content: "";
+                width: 30px;
+                height: 1px;
+                background-color: white;
+                position: absolute;
+                bottom: 0;
+                left: calc(50% - 15px);
+            }
+            
+        }
+    }
+
+    .inner-container{
+        border: 1px solid $white;
+        padding: $spacing-base;
+        width: 500px;
+        position: absolute;
+        top: 200px;
+        color: $white;
+    }
+}
+
+.interactive{
+    display: flex;
+    justify-content: center;
+    margin-top: $spacing-xxl;
+
+    .container{
+        position: relative;
+
+
+        .text{
+            position: absolute;
+            z-index: 15;
+            right: 0;
+            bottom: 0;
+            width: 50%;
+            padding: $spacing-xl 0 0 $spacing-xl;
+            background-color: $white;
+        }
+
+    }
+}
+
+.our-creations{
+
+    margin-top: $spacing-xl;
+    display: flex;
+    justify-content: center;
+
+    .container{
+
+        .title-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            button{
+                background-color: $white;
+                border: 1px solid $black;
+                padding: 0 $spacing-md;
+                text-transform: uppercase;
+                cursor: pointer;
+                height: 35px;
+                letter-spacing: 2px;
+
+                &:hover{
+                    background-color: $black;
+                    color: $white;
+                }
+            }
+        }
+
+        .creations{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 20px;
+
+            article {
+                color: $white;
+                height: 400px;
+                padding: $spacing-base;
+                padding-bottom: 0;
+
+
+                display: flex;
+                align-items: end;
+                
+                // position: relative;
+
+                // h3{
+                //     position: absolute;
+                //     bottom: 0;
+                // }
+
+                // &:nth-child(1){
+                //     background-image: url("../images/desktop/image-deep-earth.jpg");
+                // }
+                // &:nth-child(2){
+                //     background-image: url("../images/desktop/image-night-arcade.jpg");
+                // }
+                // &:nth-child(3){
+                //     background-image: url("../images/desktop/image-soccer-team.jpg");
+                // }
+                // &:nth-child(4){
+                //     background-image: url("../images/desktop/image-grid.jpg");
+                // }
+                // &:nth-child(5){
+                //     background-image: url("../images/desktop/image-from-above.jpg");
+                // }
+                // &:nth-child(6){
+                //     background-image: url("../images/desktop/image-pocket-borealis.jpg");
+                // }
+                // &:nth-child(7){
+                //     background-image: url("../images/desktop/image-curiosity.jpg");
+                // }
+                // &:nth-child(8){
+                //     background-image: url("../images/desktop/image-fisheye.jpg");
+                // }
+
+                @include images('desktop');
+
+                &:hover{
+                    cursor: pointer;
+                    opacity: 0.5;
+                }
+
+            }
+        }
+    }
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+
+    background-color: $black;
+    margin-top: $spacing-xxl;
+    color: $white;
+
+    .container {
+
+        .inner-container {
+            display: flex;
+            justify-content: space-between;
+            padding: $spacing-lg 0;
+
+            ul {
+                list-style: none;
+                display: flex;
+                margin: 0;
+                padding: 0;
+            }
+
+            .header {
+                ul {
+                    gap: 30px;
+
+                    li{
+                        position: relative;
+                        padding-bottom: 8px;
+
+                        &:hover:after{
+                            content: "";
+                            width: 30px;
+                            height: 1px;
+                            background-color: white;
+                            position: absolute;
+                            bottom: 0;
+                            left: calc(50% - 15px);
+                        }
+                    }
+                }
+
+                nav{
+                    padding-top: $spacing-md;
+
+                    a {
+                        color: $white;
+                    }
+                }
+            }
+            
+            .social{
+                ul{
+                    gap: 10px;
+                    justify-content: flex-end;
+                    
+                    li{
+                        padding-bottom: 8px;
+                        &:hover{
+                            border-bottom: 1px solid $white;
+                        }
+                    }
+                }
+                
+                .copyright {
+                    padding-top: $spacing-md;
+                }
+
+            }
+        }
+    }
+}
